@@ -13,6 +13,7 @@ public class Employee {
         this.position = position;
     }
 
+    //лучше создать методы getName, getAge... для вывода
     public void getInfo() {
         //System.out.println("Employee's Info:");
         System.out.printf("Name: %s | email: %s | age: %d | position: %s \n",

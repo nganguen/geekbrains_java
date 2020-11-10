@@ -1,18 +1,20 @@
 package lesson03;
 
 public class Group {
+
+    private static final int MAX_EMPLOYEE_COUNT = 10;
     private String name;
     private Employee[] empInGroup;
     private int index;
 
     public Group(String name) {
         this.name = name;
-        this.empInGroup = new Employee[10];
+        this.empInGroup = new Employee[MAX_EMPLOYEE_COUNT];
         this.index = -1;
     }
 
     public void setEmpInGroup(String name, String email, int age, String position) {
-       if (index == 9) {
+       if (index == MAX_EMPLOYEE_COUNT - 1) {
             System.out.println("Group is full");
             return;
         }

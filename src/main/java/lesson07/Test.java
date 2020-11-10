@@ -20,10 +20,5 @@ public class Test {
         System.out.println(orangeBox1.compare(orangeBox2));
         orangeBox1.addToBox(orangeBox2);
         orangeBox2.getAmountFruit();
-
-        appleBox2.addToBox(orangeBox2);
-
-
-
     }
 }

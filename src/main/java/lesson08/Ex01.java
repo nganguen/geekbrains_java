@@ -11,14 +11,14 @@ public class Ex01 {
                 "byte", "boolean", "banana", "apple", "banana", "orange", "java", "int"
         };
 
-        TreeMap<String, Integer> counter = new TreeMap<>();
+        Map<String, Integer> counter = new TreeMap<>();
 
         for (String word : array) {
-            counter.put(word, 0);
-        }
-
-        for (String word : array) {
-            counter.put(word, (counter.get(word) + 1));
+            if (!counter.containsKey(word)) {
+                counter.put(word, 1);
+            }
+            else
+                counter.put(word, (counter.get(word) + 1));
         }
 
         for (Map.Entry<String, Integer> word : counter.entrySet()) {
