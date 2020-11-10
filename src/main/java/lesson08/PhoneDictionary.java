@@ -4,7 +4,7 @@ import java.util.*;
 
 public class PhoneDictionary {
 
-    private HashMap<String, Set<String>> dictionary;
+    private Map<String, Set<String>> dictionary;
 
     public PhoneDictionary() {
         dictionary = new HashMap<>();

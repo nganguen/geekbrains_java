@@ -37,10 +37,8 @@ public class Main {
                 .collect(Collectors.toSet());
 
         System.out.print("Task 02: ");
-        for (String word : distinctWord) {
-            System.out.printf("%s ", word);
-        }
-        System.out.println();
+        Stream.of(distinctWord).forEach(word -> System.out.println(word));
+        //distinctWord.stream().forEach(w -> System.out.printf("%s ", w));
 
         //Task 03
         IntStream rangedIntStream = IntStream.rangeClosed(100, 200);

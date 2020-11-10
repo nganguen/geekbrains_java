@@ -24,23 +24,17 @@ public class Box <T extends Fruit> {
         return boxWeight;
     }
 
-    public boolean compare(Box compareBox) {
+    public boolean compare(Box<?> compareBox) { //compare apple and orange
         return(getWeight() == compareBox.getWeight());
     }
 
-    public void addToBox(Box toBox) {
+    public void addToBox(Box<T> toBox) { //only apple-apple; orange-orange
         if (this.fruits.size() == 0) {
             System.out.println("Box is empty. Nothing to add to another box.");
             return;
         }
-        if (((fruits.get(0) instanceof Apple) && (toBox.fruits.get(0) instanceof Apple)) ||
-                ((fruits.get(0) instanceof Orange) && (toBox.fruits.get(0) instanceof Orange))) {
-            toBox.fruits.addAll(fruits);
-            fruits.clear();
-        }
-        else {
-            System.out.println("Boxes with different fruits");
-        }
+        toBox.fruits.addAll(fruits);
+        fruits.clear();
     }
 
     public void addFruits(T fruit, int amount) {
